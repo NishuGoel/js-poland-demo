@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <h1>My {{framework}} Web component</h1>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'jspoland';
+  @Input() framework = 'Angular';
 }
